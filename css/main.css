@@ -1,0 +1,71 @@
+/*Reset to Default*/
+html, body {
+    margin: 0;
+    font-family: Consolas, monaco, monospace;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+div {
+    position: relative;
+}
+
+.main {
+    overflow: hidden;
+}
+
+/* Section */
+.content {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+}
+.content .container-fluid {
+    height: fit-content;
+}
+.content .row {
+    height: 100vh;
+    padding-top: 48px;
+    min-height: 500px;
+    max-height: 2400px;
+}
+
+/* Home */
+
+
+/* Projects */
+#projects {
+    background-color: #837b24;
+}
+
+/* Work */
+#work {
+    background-color: blue;
+}
+
+/* Education */
+#education {
+    background-color: coral;
+}
+
+/* Skills */
+#skills {
+    background-color: darkmagenta;
+}
+
+@media only screen and (max-width: 850px) {
+    .content .row {
+        height: 100vh;
+        padding-top: 48px;
+        min-height: 350px;
+        max-height: 1200px;
+    }
+}
+

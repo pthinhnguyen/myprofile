@@ -1,0 +1,150 @@
+.header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 48px;
+  background-color: rgba(237,247,246,0.5);
+  backdrop-filter: blur(64px);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.header .container-fluid {
+  padding: 1rem 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 100%;
+}
+
+.header .row {
+  height: 100%;
+}
+
+.col#nav-menu {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.col#nav-logo {
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+.col#nav-hamburger {
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+a.nav-logo {
+  font-size: 1.2rem;
+  color: #1A0F1D;
+  visibility: hidden;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav-menu a.nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100px;
+  color: #1A0F1D;
+  height: 100%;
+}
+
+.nav-menu a.nav-link:hover:not(.active) {
+  color: white;
+  background-color: #D1464A;
+}
+
+.nav-menu a.nav-link.active {
+  color: white;
+  background-color: #7A3736;
+}
+
+.nav-hamburger {
+  visibility: hidden;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+@media only screen and ((max-aspect-ratio: 9/24) or (max-width: 1000px)) {      
+  .header.active {
+    transition: 0.4s;
+    height: calc(6*48px);
+  }
+  
+  a.nav-logo {
+    visibility: visible;
+  }
+
+  a.nav-logo.active {
+    position: fixed;
+    top: 10px;
+    opacity: 0;
+    transition: 0.4s;
+  }
+
+  .nav-menu {
+    position: fixed;
+    height: fit-content;
+    top: 48px;
+    width: 100%;
+    right: -100%;
+    flex-direction: column;
+    text-align: center;
+    transition: 0.4s;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+  
+  .nav-menu a.nav-link {
+    height: 48px;
+    width: 100%;
+  }
+
+  .nav-hamburger {
+    visibility: visible;
+    cursor: pointer;
+  }
+
+  .nav-hamburger.active {
+    position: fixed;
+    top: 10px;
+  }
+
+  .nav-hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav-hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
