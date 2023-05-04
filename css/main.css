@@ -16,6 +16,17 @@ div {
     position: relative;
 }
 
+p {
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+
+    font-size: min(18px, 1.2vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .main {
     overflow: hidden;
 }
@@ -35,32 +46,15 @@ div {
     padding-top: 48px;
     min-height: 500px;
     max-height: 2400px;
+
+    overflow: hidden;
 }
 
-/* Home */
+@media only screen and (max-width: 1000px) {
+    p {
+        font-size: max(10px, 1.5vw);
+    }
 
-
-/* Projects */
-#projects {
-    background-color: #837b24;
-}
-
-/* Work */
-#work {
-    background-color: blue;
-}
-
-/* Education */
-#education {
-    background-color: coral;
-}
-
-/* Skills */
-#skills {
-    background-color: darkmagenta;
-}
-
-@media only screen and (max-width: 850px) {
     .content .row {
         height: 100vh;
         padding-top: 48px;
