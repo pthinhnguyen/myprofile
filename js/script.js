@@ -12,7 +12,6 @@ function isMobileScreen() {
 /**
  * Navigation
  */
-
 $(function(){
   // change active
   $(document).on("scroll", onScroll);
@@ -71,7 +70,6 @@ function toggleNavbar() {
 /**
  * Project Slideshow
  */
-
 let currentSlideOrder = 1;
 let projectSlideShowItemId = "project-slideshow-item";
 let projectCardId = "project-card";
@@ -150,4 +148,36 @@ function showSlides(slideOrder) {
     }
 
     return slideOrder;
+}
+
+/**
+ * Working Experience
+ */
+// var workExperienceCollassipleCards = document.getElementsByClassName("work-collapsible-card-header");
+// for (let i = 0; i < workExperienceCollassipleCards.length; i++) {
+//     workExperienceCollassipleCards[i].addEventListener("click", function() {
+//         this.classList.toggle("active");
+//         var content = this.nextElementSibling;
+//         if (content.style.maxHeight) {
+//             content.style.maxHeight = null;
+//         } else {
+//             content.style.maxHeight = content.scrollHeight + "px";
+//         } 
+//     });
+// }
+function toggleCollapsibleSectionWithAnimation() {
+    this.classList.toggle(".work-collapsible-card-active");
+    var content = this.nextElementSibling;
+    var isDefaultMode = content.classList.contains('work-collapsible-card-content-shown-by-default');
+
+    if (isDefaultMode) {
+        content.classList.remove("work-collapsible-card-content-shown-by-default");
+        content.style.maxHeight = 0;
+    }
+
+    if (content.style.maxHeight !== 0) {
+        content.style.maxHeight = null;
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+    }
 }

@@ -32,8 +32,7 @@
     justify-content: center;
 }
 
-#work .work-timeline {
-    border-top: 6px solid hsl(0, 0%, 90%);
+#work .work-collapsible {
     position: relative;
     width: 100%;
     height: 100%;
@@ -41,8 +40,53 @@
 
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: top;
+    flex-direction: column;
+}
+
+#work .work-collapsible-card-header {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+
+    position: relative;
+}
+
+#work .work-collapsible-card-active, #work .work-collapsible-card-header:hover {
+    background-color: #ccc;
+    text-decoration: underline;
+}
+
+#work .work-collapsible-card-header:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+  
+#work .work-collapsible-card-header.active:after {
+    content: "\2212";
+}
+
+#work .work-collapsible-card-content {
+    max-height: 0;
+    padding: 0 18px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+#work .work-collapsible-card-content-shown-by-default {
+    max-height: 100%;
+    padding: 0 18px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 @media only screen and (max-aspect-ratio: 9/24),
@@ -67,12 +111,12 @@ screen and (max-width: 1000px) {
         padding-top: 0;
     }
 
-    #work .work-timeline {
+    #work .work-collapsible {
         border-top: unset;
-        border-left: 3px solid hsl(0, 0%, 90%);
         position: relative;
         list-style: none;
         left: 8px;
-        /*top: 0;*/
+
+        flex-direction: column;
     }
 }
