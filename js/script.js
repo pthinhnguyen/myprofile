@@ -166,9 +166,9 @@ function showSlides(slideOrder) {
 //     });
 // }
 function toggleCollapsibleSectionWithAnimation() {
-    this.classList.toggle(".work-collapsible-card-active");
     var content = this.nextElementSibling;
     var isDefaultMode = content.classList.contains('work-collapsible-card-content-shown-by-default');
+    this.classList.toggle(".work-collapsible-card-active");
 
     if (isDefaultMode) {
         content.classList.remove("work-collapsible-card-content-shown-by-default");

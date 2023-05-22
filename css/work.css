@@ -76,7 +76,7 @@
 }
 
 #work .work-collapsible-card-content {
-    max-height: 0;
+    max-height: 0px;
     padding: 0 18px;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
