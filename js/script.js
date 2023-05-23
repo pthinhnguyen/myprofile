@@ -166,18 +166,7 @@ function showSlides(slideOrder) {
 //     });
 // }
 function toggleCollapsibleSectionWithAnimation() {
-    var content = this.nextElementSibling;
-    var isDefaultMode = content.classList.contains('work-collapsible-card-content-shown-by-default');
-    this.classList.toggle(".work-collapsible-card-active");
-
-    if (isDefaultMode) {
-        content.classList.remove("work-collapsible-card-content-shown-by-default");
-        content.style.maxHeight = 0;
-    }
-
-    if (content.style.maxHeight !== 0) {
-        content.style.maxHeight = null;
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-    }
+    let content =  this.nextElementSibling;
+    this.classList.toggle('active');
+    content.classList.toggle('active');
 }

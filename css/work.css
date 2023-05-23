@@ -44,6 +44,15 @@
     flex-direction: column;
 }
 
+/* #work .work-collapsible-card {
+    max-height: auto;
+    transition: all 0.4s ease-out;
+}
+
+#work .work-collapsible-card.active {
+    max-height: 100%;
+} */
+
 #work .work-collapsible-card-header {
     background-color: #eee;
     color: #444;
@@ -58,8 +67,9 @@
     position: relative;
 }
 
-#work .work-collapsible-card-active, #work .work-collapsible-card-header:hover {
-    background-color: #ccc;
+#work .work-collapsible-card-header:hover:not(.active) {
+    background-color: #D1464A;
+    color: white;
     text-decoration: underline;
 }
 
@@ -70,23 +80,27 @@
     float: right;
     margin-left: 5px;
 }
-  
+
+#work .work-collapsible-card-header.active {
+    /* text-decoration: underline; */
+    background-color: #7A3736;
+    color: white;
+    font-weight: bold;
+}
+
 #work .work-collapsible-card-header.active:after {
     content: "\2212";
 }
 
 #work .work-collapsible-card-content {
-    max-height: 0px;
+    max-height: 0;
     padding: 0 18px;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.8s ease-in-out;
 }
 
-#work .work-collapsible-card-content-shown-by-default {
+#work .work-collapsible-card-content.active {
     max-height: 100%;
-    padding: 0 18px;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
 }
 
 @media only screen and (max-aspect-ratio: 9/24),
@@ -111,12 +125,12 @@ screen and (max-width: 1000px) {
         padding-top: 0;
     }
 
-    #work .work-collapsible {
+    /* #work .work-collapsible {
         border-top: unset;
         position: relative;
         list-style: none;
         left: 8px;
 
         flex-direction: column;
-    }
+    } */
 }
