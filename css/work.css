@@ -1,5 +1,5 @@
 #work {
-    background-color: #EDF7F6;
+    background-color: yellowgreen;
 }
 
 #work .row-content {
@@ -97,6 +97,7 @@
     padding: 0 18px;
     overflow: hidden;
     transition: max-height 0.8s ease-in-out;
+    background-color: whitesmoke;
 }
 
 #work .work-collapsible-card-content.active {
@@ -124,13 +125,4 @@ screen and (max-width: 1000px) {
     #work .row-body {
         padding-top: 0;
     }
-
-    /* #work .work-collapsible {
-        border-top: unset;
-        position: relative;
-        list-style: none;
-        left: 8px;
-
-        flex-direction: column;
-    } */
 }
