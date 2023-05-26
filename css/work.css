@@ -6,15 +6,13 @@
     height: 100%;
     width: 100%;
 
-    display: block;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #work .row-header {
     height: 10%;
-    min-height: fit-content;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
     font-size: 2.5rem;
 
     padding-bottom: 0;
@@ -23,13 +21,9 @@
 #work .row-body {
     height: 90%;
     min-height: fit-content;
-    width: 100%;
+    width: 90%;
 
     padding-top: 32px;
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
 }
 
 #work .work-collapsible {

@@ -8,15 +8,13 @@
     height: 100%;
     width: 100%;
 
-    display: block;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #projects .row-header {
     height: 10%;
-    min-height: fit-content;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
     font-size: 2.5rem;
 
     padding-bottom: 0;
@@ -24,17 +22,12 @@
 
 #projects .row-body {
     height: 90%;
-    min-height: fit-content;
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 90%;
 }
 
 #projects .project-slideshow-container {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 95%;
     max-width: 2000px;
 
     display: flex;
@@ -170,22 +163,20 @@ screen and (max-width: 1000px) {
     #projects .row-content {
         min-height: 350px;
         max-height: 100%;
-        padding-left: 0;
-        padding-right: 0;
     }
 
     #projects .row-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         font-size: 1.5rem;
+        height: 5%;
+    }
 
-        padding-bottom: 1%;
+    #projects .row-body {
+        width: 95%;
+        height: 95%
     }
 
     #projects .project-slideshow-container {
-        width: 100%;
-        height: 100%;
+        height: 95%;
         min-width: 350px;
     }
 
