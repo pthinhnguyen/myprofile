@@ -20,32 +20,17 @@
 
 #work .row-body {
     height: 90%;
-    min-height: fit-content;
     width: 90%;
-
-    padding-top: 32px;
 }
 
 #work .work-collapsible {
-    position: relative;
     width: 100%;
-    height: 100%;
-    max-width: 1200px;
+    height: 95%;
+    max-width: 2000px;
 
     display: flex;
-    align-items: flex-start;
-    justify-content: top;
     flex-direction: column;
 }
-
-/* #work .work-collapsible-card {
-    max-height: auto;
-    transition: all 0.4s ease-out;
-}
-
-#work .work-collapsible-card.active {
-    max-height: 100%;
-} */
 
 #work .work-collapsible-card-header {
     background-color: #eee;
@@ -103,20 +88,20 @@ screen and (max-width: 1000px) {
     #work .row-content {
         min-height: 350px;
         max-height: 100%;
-        padding-left: 0;
-        padding-right: 0;
     }
 
     #work .row-header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         font-size: 1.5rem;
-
-        padding-bottom: 1%;
+        height: 5%;
     }
 
     #work .row-body {
-        padding-top: 0;
+        width: 95%;
+        height: 95%
+    }
+
+    #work .work-collapsible {
+        height: 95%;
+        min-width: 350px;
     }
 }

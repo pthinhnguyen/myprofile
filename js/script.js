@@ -153,20 +153,22 @@ function showSlides(slideOrder) {
 /**
  * Working Experience
  */
-// var workExperienceCollassipleCards = document.getElementsByClassName("work-collapsible-card-header");
-// for (let i = 0; i < workExperienceCollassipleCards.length; i++) {
-//     workExperienceCollassipleCards[i].addEventListener("click", function() {
-//         this.classList.toggle("active");
-//         var content = this.nextElementSibling;
-//         if (content.style.maxHeight) {
-//             content.style.maxHeight = null;
-//         } else {
-//             content.style.maxHeight = content.scrollHeight + "px";
-//         } 
-//     });
-// }
 function toggleCollapsibleSectionWithAnimation() {
-    let content =  this.nextElementSibling;
-    this.classList.toggle('active');
-    content.classList.toggle('active');
+    const collapsibleNode = document.getElementsByClassName("work-collapsible");
+    const collapsibleElements = collapsibleNode[0].children;
+    const collapsibleArrays = Array.from(collapsibleElements);
+    
+    collapsibleArrays.forEach((child) => {
+        if (child.classList.contains("work-collapsible-card-header")) {
+            const content =  child.nextElementSibling;
+            if (child.isEqualNode(this)) {
+                child.classList.add("active");
+                content.classList.add("active");
+            }
+            else {
+                child.classList.remove("active");
+                content.classList.remove("active");
+            }
+        }
+    })
 }
