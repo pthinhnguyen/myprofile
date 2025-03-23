@@ -1,2 +1,7 @@
-.DS_store
-.idea/
+# Ignore VS Code settings
+.vscode/
+
+# Other common ignores
+node_modules/
+dist/
+*.log
