@@ -1,13 +1,19 @@
 @import "tailwindcss";
 
-/* Optional: Add your custom styles below */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+    scroll-behavior: smooth;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+section {
+    scroll-margin-top: 60px; /* Matches the approximate height of the nav bar */
+}
+
+.snap-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
 }

@@ -1,25 +1,34 @@
 export default function NavBar() {
     return (
-        <nav className="bg-gray-800 p-4">
-            <div className="container mx-auto flex justify-between items-center">
-                <a href="/" className="text-white text-lg font-bold">
-                    MyProfile
-                </a>
-                <div className="hidden md:flex space-x-4">
-                    <a href="/" className="text-white hover:text-gray-300">
+        <nav className="fixed top-0 w-full bg-white shadow z-10">
+            <ul className="flex space-x-6 p-4 justify-center">
+                <li>
+                    <a href="#home" className="text-blue-500 hover:underline">
                         Home
                     </a>
+                </li>
+                <li>
+                    <a href="#about" className="text-blue-500 hover:underline">
+                        About
+                    </a>
+                </li>
+                <li>
                     <a
-                        href="/projects"
-                        className="text-white hover:text-gray-300"
+                        href="#projects"
+                        className="text-blue-500 hover:underline"
                     >
                         Projects
                     </a>
-                    <a href="/about" className="text-white hover:text-gray-300">
-                        About
+                </li>
+                <li>
+                    <a
+                        href="#contact"
+                        className="text-blue-500 hover:underline"
+                    >
+                        Contact
                     </a>
-                </div>
-            </div>
+                </li>
+            </ul>
         </nav>
     );
 }
